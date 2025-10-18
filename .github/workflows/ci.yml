@@ -27,12 +27,19 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Build with Gradle
+      run: ./gradlew build
+
+    - name: List build output
+      run: ls -l build/libs
 
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: nanajanashia/demo-app
+        image: krishsk0988/javaproject
         registry: docker.io
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-         
+        username: ${{ secrets.username }}
+        password: ${{ secrets.password }}
+  
+
+   
