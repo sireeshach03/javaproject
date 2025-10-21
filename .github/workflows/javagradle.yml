@@ -38,7 +38,7 @@ jobs:
       with:
         image: sireesha03/sirimini-pro2
         registry: docker.io
-        username: ${{ secrets.USERNAME }}
+        username: ${{ secrets.NAME }}
         password: ${{ secrets.PASSWORD }}
   
 
